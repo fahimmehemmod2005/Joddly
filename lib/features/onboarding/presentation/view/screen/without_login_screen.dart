@@ -38,7 +38,9 @@ class _WithoutLoginScreenState extends State<WithoutLoginScreen> {
                           borderColor: Color(0xff7C5BFD),
                           textColor: Colors.black,
                           label: 'Sign Up',
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushReplacementNamed(context, RouteName.signup);
+                          },
                         ),
                       ),
                       const SizedBox(width: 15.0),

@@ -19,7 +19,7 @@ class InputField extends StatelessWidget {
     super.key,
     this.hintText,
     this.contentPadding,
-    this.maxLine,
+    this.maxLine = 1,
     this.controller,
     this.topLabel,
     this.prefixIcon,

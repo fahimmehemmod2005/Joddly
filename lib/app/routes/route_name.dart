@@ -6,4 +6,5 @@ class RouteName {
   static const String forgot = '/forgot';
   static const String otp = '/otp';
   static const String resetPass = '/resetPass';
+  static const String signup = '/signup';
 }

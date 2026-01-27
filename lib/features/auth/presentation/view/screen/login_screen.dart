@@ -11,7 +11,7 @@ import 'package:joddly/app/widgets/title_subtitle_bar.dart';
 import 'package:joddly/core/constant/app_color.dart';
 import 'package:joddly/core/constant/app_images.dart';
 import 'package:joddly/core/constant/app_size_box.dart';
-import 'package:joddly/features/auth/presentation/view/widgets/show_white_dialog.dart';
+import 'package:joddly/app/widgets/show_white_dialog.dart';
 import 'package:joddly/features/auth/presentation/viewmodel/login_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -108,7 +108,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       AppSizeBox.height30,
                       InputField(
-                        maxLine: 1,
                         topLabel: 'Email',
                         hintText: 'Enter your email',
                         controller: _userName,
@@ -116,7 +115,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       AppSizeBox.height20,
                       InputField(
-                        maxLine: 1,
                         topLabel: 'Password',
                         hintText: 'Enter your Password',
                         controller: _password,
@@ -145,7 +143,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       CustomRichText(
                         text1: "Don't have an account? ",
                         text2: "Sign up",
-                        text2Tap: () {},
+                        text2Tap: () {
+                          Navigator.pushNamed(context, RouteName.signup);
+                        },
                       ),
                       AppSizeBox.height30,
                       DividerCenterText(title: 'OR'),

@@ -46,7 +46,6 @@ class _ForgotScreenState extends State<ForgotScreen> {
                         InputField(
                           topLabel: 'Email',
                           hintText: 'Enter your email',
-                          maxLine: 1,
                           controller: _userName,
                           validator: provider.validateEmail,
                         ),

@@ -13,7 +13,7 @@ import 'package:joddly/features/auth/presentation/viewmodel/reset_password_view_
 import 'package:provider/provider.dart';
 import '../../../../../app/routes/route_name.dart';
 import '../../../../../core/constant/app_color.dart';
-import '../widgets/show_white_dialog.dart';
+import '../../../../../app/widgets/show_white_dialog.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
   const ResetPasswordScreen({super.key});
@@ -111,7 +111,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     InputField(
                       topLabel: 'Password',
                       hintText: 'Enter your password',
-                      maxLine: 1,
                       controller: _password,
                       validator: provider.validatePassword,
                       onSuffixTap: provider.togglePassword,
@@ -124,7 +123,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     InputField(
                       topLabel: 'Re-type password',
                       hintText: 'Re-type your password',
-                      maxLine: 1,
                       controller: _rePassword,
                       validator: (val) =>
                           provider.validateConfirmPassword(val, _password.text),
