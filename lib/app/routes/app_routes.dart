@@ -4,6 +4,8 @@ import 'package:joddly/features/auth/presentation/view/screen/login_screen.dart'
 import 'package:joddly/features/auth/presentation/view/screen/otp_screen.dart';
 import 'package:joddly/features/auth/presentation/view/screen/reset_password_screen.dart';
 import 'package:joddly/features/auth/presentation/view/screen/signup_screen.dart';
+import 'package:joddly/features/main/presentation/view/screen/bottom_nav_bar_screen.dart';
+import 'package:joddly/features/main/presentation/view/screen/main_screen.dart';
 import 'package:joddly/features/onboarding/presentation/view/screen/onboarding_screen.dart';
 import 'package:joddly/features/onboarding/presentation/view/screen/without_login_screen.dart';
 import 'package:joddly/features/splash/splash_screen.dart';
@@ -21,6 +23,8 @@ class AppRoutes {
     RouteName.otp: (context) => const OtpScreen(),
     RouteName.resetPass: (context) => const ResetPasswordScreen(),
     RouteName.signup: (context) => const SignupScreen(),
+    RouteName.mainScreen: (context) => const MainScreen(),
+    RouteName.bottomNavScreen: (context) => const BottomNavBarScreen(),
 
   };
 }

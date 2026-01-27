@@ -36,6 +36,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        AppSizeBox.height5,
                         WidgetHeader(),
                         AppSizeBox.height20,
                         TitleSubtitleBar(

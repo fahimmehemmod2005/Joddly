@@ -8,9 +8,7 @@ import 'package:provider/provider.dart';
 
 import '../../../../../app/routes/route_name.dart';
 import '../../../../../app/widgets/title_subtitle_bar.dart';
-import '../../../../../core/constant/app_color.dart';
 import '../../../../../core/constant/app_size_box.dart';
-import '../../../../../core/constant/app_text_styles.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -95,6 +93,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    AppSizeBox.height5,
                     WidgetHeader(),
                     AppSizeBox.height25,
                     TitleSubtitleBar(
@@ -117,6 +116,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     ResendButton(),
                     AppSizeBox.height30,
                     PrimaryButton(label: 'Verify', onPressed: onPressed),
+                 AppSizeBox.height10
                   ],
                 ),
               ),

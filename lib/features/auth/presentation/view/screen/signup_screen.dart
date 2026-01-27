@@ -36,6 +36,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
   void onPressed() {
     if (_formKey.currentState!.validate()) {
+      Navigator.pushReplacementNamed(context, RouteName.mainScreen);
       print('Name: ${_name.text.trim()}');
       print('Email: ${_email.text.trim()}');
       print('Password: ${_password.text.trim()}');
@@ -90,6 +91,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    AppSizeBox.height5,
                     TitleSubtitleBar(
                       title: 'Welcome Back!',
                       subtitle:
@@ -168,6 +170,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       icon: AppImages.apple,
                       onPressed: () {},
                     ),
+                    AppSizeBox.height10,
                   ],
                 ),
               ),

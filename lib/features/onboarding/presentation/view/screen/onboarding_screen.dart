@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 
 import '../../../../../app/widgets/primary_button.dart';
 import '../../../../../core/constant/app_images.dart';
-import '../../../../../core/constant/app_size_box.dart';
 import '../../viewmodel/onboarding_view_model.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -15,7 +14,7 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  var onboarding = [
+  final onboarding = [
     {
       'image': AppImages.onboarding1,
       'title': 'Unleash your creative\npower and ideas',
@@ -35,6 +34,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           'Turn your ideas into stunning visuals with AI create and share your art effortlessly.',
     },
   ];
+
   @override
   Widget build(BuildContext context) {
     return Consumer<OnboardingViewModel>(
@@ -42,7 +42,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         return Scaffold(
           body: Stack(
             children: [
-              // PageView
+              // Background PageView
               PageView.builder(
                 controller: provider.pageController,
                 itemCount: onboarding.length,
@@ -51,6 +51,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   return Image.asset(
                     onboarding[index]['image']!,
                     fit: BoxFit.cover,
+                    width: double.infinity,
+                    height: double.infinity,
                   );
                 },
               ),
@@ -58,31 +60,35 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               // Bottom content
               SafeArea(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 20.w),
                   child: Column(
                     children: [
-                      const SizedBox(height: 550.0),
+                      // this takes remaining space instead of fixed 550
+                      const Spacer(flex: 9),
+
                       Text(
                         onboarding[provider.currentIndex]['title']!,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 24.sp,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff070707),
+                          color: const Color(0xff070707),
                         ),
                       ),
-                      const SizedBox(height: 10.0),
+
+                      10.verticalSpace,
+
                       Text(
                         onboarding[provider.currentIndex]['subtitle']!,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 14,
+                          fontSize: 14.sp,
                           fontWeight: FontWeight.w400,
-                          color: Color(0xff4A4C56),
+                          color: const Color(0xff4A4C56),
                         ),
                       ),
 
-                      AppSizeBox.height20,
+                      20.verticalSpace,
 
                       // Indicator
                       Row(
@@ -91,28 +97,30 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           onboarding.length,
                           (index) => AnimatedContainer(
                             duration: const Duration(milliseconds: 300),
-                            margin: const EdgeInsets.symmetric(horizontal: 4),
+                            margin: EdgeInsets.symmetric(horizontal: 4.w),
                             height: 8.h,
-                            width: provider.currentIndex == index ? 30.w : 8.w,
+                            width:
+                                provider.currentIndex == index ? 28.w : 8.w,
                             decoration: BoxDecoration(
                               color: provider.currentIndex == index
-                                  ? Color(0xff7C5BFD)
-                                  : Color(0xffE0E0E0),
-                              borderRadius: BorderRadius.circular(20),
+                                  ? const Color(0xff7C5BFD)
+                                  : const Color(0xffE0E0E0),
+                              borderRadius: BorderRadius.circular(20.r),
                             ),
                           ),
                         ),
                       ),
 
-                      const Spacer(),
+                      const Spacer(flex: 2),
 
+                      // Buttons
                       Row(
                         children: [
                           Expanded(
                             child: PrimaryButton(
                               showGradient: false,
                               backgroundColor: Colors.transparent,
-                              borderColor: Color(0xff7C5BFD),
+                              borderColor: const Color(0xff7C5BFD),
                               textColor: Colors.black,
                               label: 'Skip',
                               onPressed: () {
@@ -120,11 +128,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               },
                             ),
                           ),
-                          const SizedBox(width: 15.0),
+                          15.horizontalSpace,
                           Expanded(
                             child: PrimaryButton(
                               textColor: Colors.white,
-                              label: provider.currentIndex == onboarding.length - 1
+                              label: provider.currentIndex ==
+                                      onboarding.length - 1
                                   ? "Get Started"
                                   : "Continue",
                               onPressed: () {
@@ -134,7 +143,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                         ],
                       ),
-                      AppSizeBox.height10,
+
+                      10.verticalSpace,
                     ],
                   ),
                 ),
@@ -146,4 +156,3 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 }
-

@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            AppSizeBox.height20,
+            AppSizeBox.height5,
             SpinKitCircle(color: AppColor.primaryColor, size: 80),
             AppSizeBox.height30,
             const Text(
@@ -61,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       Timer(const Duration(seconds: 3), () {
         Navigator.pop(context);
-        //Navigator.pushReplacementNamed(context, RouteName.onboarding);
+        Navigator.pushReplacementNamed(context, RouteName.mainScreen);
       });
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -172,6 +172,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         icon: AppImages.apple,
                         onPressed: () {},
                       ),
+                      AppSizeBox.height10
                     ],
                   ),
                 ),

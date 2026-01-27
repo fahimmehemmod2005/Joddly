@@ -20,15 +20,15 @@ class LoginViewModel extends ChangeNotifier {
   // Password Validator
   String? validatePassword(String? password) {
     if (password == null || password.isEmpty) return 'Password is required';
-    if (password.length < 8) return 'Password must be at least 8 characters';
-    final hasUppercase = password.contains(RegExp(r'[A-Z]'));
+    if (password.length < 6) return 'Password must be at least 6 characters';
+    /*final hasUppercase = password.contains(RegExp(r'[A-Z]'));
     final hasLowercase = password.contains(RegExp(r'[a-z]'));
     final hasNumber = password.contains(RegExp(r'\d'));
     final hasSpecial = password.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'));
     if (!hasUppercase) return 'Must contain at least one uppercase letter';
     if (!hasLowercase) return 'Must contain at least one lowercase letter';
     if (!hasNumber) return 'Must contain at least one number';
-    if (!hasSpecial) return 'Must contain at least one special character';
+    if (!hasSpecial) return 'Must contain at least one special character';*/
     return null;
   }
 

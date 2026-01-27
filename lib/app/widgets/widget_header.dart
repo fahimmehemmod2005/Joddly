@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../core/constant/app_text_styles.dart';
 
 class WidgetHeader extends StatelessWidget {
   final String? title;

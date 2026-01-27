@@ -1,8 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../../../core/constant/app_color.dart';
-import '../../../../../core/constant/app_text_styles.dart';
 import '../../features/auth/presentation/viewmodel/resend_button_view_model.dart';
 
 class ResendButton extends StatelessWidget {

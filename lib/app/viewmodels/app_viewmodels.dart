@@ -1,4 +1,5 @@
 import 'package:joddly/features/auth/presentation/viewmodel/signup_view_model.dart';
+import 'package:joddly/features/main/presentation/viewmodel/bottom_nav_view_model.dart';
 import 'package:joddly/features/onboarding/presentation/viewmodel/onboarding_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
@@ -30,6 +31,9 @@ class AppViewModels {
     ),
     ChangeNotifierProvider<ResetPasswordViewModel>(
       create: (_) => ResetPasswordViewModel(),
+    ),
+    ChangeNotifierProvider<BottomNavViewModel>(
+      create: (_) => BottomNavViewModel(),
     ),
   ];
 }

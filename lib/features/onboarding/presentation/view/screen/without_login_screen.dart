@@ -58,7 +58,9 @@ class _WithoutLoginScreenState extends State<WithoutLoginScreen> {
                   AppSizeBox.height15,
                   TextButton(
                       child: Text('Continue as Guest'),
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.pushNamed(context, RouteName.mainScreen);
+                      },
                   )
                 ],
               ),

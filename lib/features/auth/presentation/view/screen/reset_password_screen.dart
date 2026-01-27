@@ -1,7 +1,4 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:joddly/app/widgets/input_field.dart';
 import 'package:joddly/app/widgets/primary_button.dart';
 import 'package:joddly/app/widgets/title_subtitle_bar.dart';
@@ -12,7 +9,6 @@ import 'package:joddly/core/constant/app_text_styles.dart';
 import 'package:joddly/features/auth/presentation/viewmodel/reset_password_view_model.dart';
 import 'package:provider/provider.dart';
 import '../../../../../app/routes/route_name.dart';
-import '../../../../../core/constant/app_color.dart';
 import '../../../../../app/widgets/show_white_dialog.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
@@ -100,6 +96,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    AppSizeBox.height5,
                     WidgetHeader(),
                     AppSizeBox.height20,
                     TitleSubtitleBar(

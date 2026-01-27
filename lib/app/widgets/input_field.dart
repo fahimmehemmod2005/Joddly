@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../core/constant/app_text_styles.dart';
 
 class InputField extends StatelessWidget {
   final String? topLabel;
