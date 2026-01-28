@@ -9,4 +9,9 @@ class RouteName {
   static const String signup = '/signup';
   static const String mainScreen = '/mainScreen';
   static const String bottomNavScreen = '/bottomNavScreen';
+  static const String homeScreen = '/homeScreen';
+  static const String seeAll = '/seeAll';
+  static const String previewImageScreen = '/previewImageScreen';
+  static const String notificationScreen = '/notificationScreen';
+  static const String discoverScreen = '/discoverScreen';
 }

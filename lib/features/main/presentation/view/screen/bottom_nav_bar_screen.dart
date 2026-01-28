@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:joddly/core/constant/app_color.dart';
 import 'package:joddly/core/constant/app_images.dart';
+import 'package:joddly/features/discover/presentation/view/screen/discover_screen.dart';
+import 'package:joddly/features/home/presentation/view/screen/home_screen.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodel/bottom_nav_view_model.dart';
 
@@ -13,10 +15,10 @@ class BottomNavBarScreen extends StatefulWidget {
 }
 
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
-  final screens = const [
-    Center(child: Text("Stocks")),
-    Center(child: Text("Crypto")),
-    Center(child: Text("Stocks")),
+  var screens = const [
+    HomeScreen(),
+    DiscoverScreen(),
+    HomeScreen(),
     Center(child: Text("Chat")),
     Center(child: Text("Profile")),
   ];
@@ -101,7 +103,7 @@ Widget _centerButton(BottomNavViewModel provider, void Function()? onTap) {
         gradient: const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [Color(0xff7C5BFD), Color(0xff24019C)],
+          colors: [Color(0xff9785F5), Color(0xff24019C)],
         ),
       ),
       child: Center(

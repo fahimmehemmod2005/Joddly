@@ -1,4 +1,7 @@
 import 'package:joddly/features/auth/presentation/viewmodel/signup_view_model.dart';
+import 'package:joddly/features/home/presentation/viewmodel/aspect_ratio_provoder.dart';
+import 'package:joddly/features/home/presentation/viewmodel/drop_down_provoder.dart';
+import 'package:joddly/features/home/presentation/viewmodel/image_selection_provider.dart';
 import 'package:joddly/features/main/presentation/viewmodel/bottom_nav_view_model.dart';
 import 'package:joddly/features/onboarding/presentation/viewmodel/onboarding_view_model.dart';
 import 'package:provider/provider.dart';
@@ -34,6 +37,15 @@ class AppViewModels {
     ),
     ChangeNotifierProvider<BottomNavViewModel>(
       create: (_) => BottomNavViewModel(),
+    ),
+    ChangeNotifierProvider<AspectRatioProvider>(
+      create: (_) => AspectRatioProvider(),
+    ),
+    ChangeNotifierProvider<DropdownProvider>(
+      create: (_) => DropdownProvider(),
+    ),
+    ChangeNotifierProvider<ImageSelectionProvider>(
+      create: (_) => ImageSelectionProvider(),
     ),
   ];
 }

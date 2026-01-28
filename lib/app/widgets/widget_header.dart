@@ -35,7 +35,7 @@ class WidgetHeader extends StatelessWidget {
         SizedBox(width: width),
 
         if (title != null)
-          Text(title!, style: TextStyle(color: Colors.grey,fontSize: 18,fontWeight: FontWeight.w500)),
+          Text(title!, style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.w500)),
 
         const Spacer(),
 

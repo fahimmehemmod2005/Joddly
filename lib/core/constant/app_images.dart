@@ -2,6 +2,7 @@ class AppImages {
   AppImages._();
   static const String splash = 'assets/images/splash.png';
   static const String logo = 'assets/icons/logo.png';
+  static const String logo1 = 'assets/icons/logo1.png';
   static const String onboarding1 = 'assets/images/onboarding1.png';
   static const String onboarding2 = 'assets/images/onboarding2.png';
   static const String onboarding3 = 'assets/images/onboarding3.png';
@@ -10,6 +11,7 @@ class AppImages {
   static const String google = 'assets/icons/google.png';
   static const String apple = 'assets/icons/apple.png';
   static const String checkColor = 'assets/icons/check_color.png';
+  static const String checkColor2 = 'assets/icons/check_color_2.png';
   static const String art = 'assets/icons/art.png';
   static const String discover = 'assets/icons/discover.png';
   static const String home = 'assets/icons/home.png';
@@ -22,4 +24,25 @@ class AppImages {
   static const String layer2 = 'assets/images/layer_2.png';
   static const String layer3 = 'assets/images/layer_3.png';
   static const String achive = 'assets/icons/achive.png';
+  static const String notification = 'assets/icons/notification.png';
+  static const String abstrac1 = 'assets/images/abstrac1.png';
+  static const String abstrac2 = 'assets/images/abstrac2.png';
+  static const String abstrac3 = 'assets/images/abstrac3.png';
+  static const String digital1 = 'assets/images/digital1.png';
+  static const String digital2 = 'assets/images/digital2.png';
+  static const String digital3 = 'assets/images/digital3.png';
+  static const String oil1 = 'assets/images/oil1.png';
+  static const String oil2 = 'assets/images/oil2.png';
+  static const String oil3 = 'assets/images/oil3.png';
+  static const String realistic1 = 'assets/images/realistic1.png';
+  static const String realistic2 = 'assets/images/realistic2.png';
+  static const String realistic3 = 'assets/images/realistic3.png';
+  static const String delete = 'assets/icons/delete.png';
+  static const String image = 'assets/icons/image.png';
+  static const String share = 'assets/icons/share.png';
+  static const String sketches1 = 'assets/images/sketches1.png';
+  static const String sketches2 = 'assets/images/sketches2.png';
+  static const String sketches3 = 'assets/images/sketches3.png';
+  static const String search = 'assets/icons/search.png';
+  static const String filter = 'assets/icons/filter.png';
 }

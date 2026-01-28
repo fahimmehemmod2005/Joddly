@@ -9,6 +9,7 @@ import 'package:joddly/core/constant/app_text_styles.dart';
 import 'package:joddly/features/auth/presentation/viewmodel/reset_password_view_model.dart';
 import 'package:provider/provider.dart';
 import '../../../../../app/routes/route_name.dart';
+import '../../../../../app/widgets/my_dialog.dart';
 import '../../../../../app/widgets/show_white_dialog.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
@@ -35,31 +36,15 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
       print('Confirm Password: ${_rePassword.text.trim()}');
       showWhiteDialog(
         context: context,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            AppSizeBox.height20,
-            Image.asset(AppImages.checkColor, height: 100, width: 100),
-            AppSizeBox.height20,
-            Text(
-              'Reset Password\nSuccessful!',
-              style: AppTextStyles.size20w600(color: Colors.black),
-              textAlign: TextAlign.center,
-            ),
-            AppSizeBox.height10,
-            Text(
-              'You will be directed to the homepage.',
-              style: AppTextStyles.size14w400(color: Color(0xff4A4C56)),
-            ),
-            AppSizeBox.height20,
-            PrimaryButton(
-              label: 'Get Started',
-              onPressed: (){
-                Navigator.pushReplacementNamed(context, RouteName.login);
-              },
-            ),
-            AppSizeBox.height20,
-          ],
+        child: MyDialog(
+          context: context,
+          imagePath: AppImages.checkColor,
+          title: 'Reset Password\nSuccessful!',
+          subTitle: 'You will be directed to the homepage.',
+          button1label: 'Get Started',
+          button1Pressed: () {
+            Navigator.pushReplacementNamed(context, RouteName.login);
+          },
         ),
       );
     } else {
@@ -145,3 +130,5 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
     );
   }
 }
+
+

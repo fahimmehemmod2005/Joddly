@@ -4,6 +4,11 @@ import 'package:joddly/features/auth/presentation/view/screen/login_screen.dart'
 import 'package:joddly/features/auth/presentation/view/screen/otp_screen.dart';
 import 'package:joddly/features/auth/presentation/view/screen/reset_password_screen.dart';
 import 'package:joddly/features/auth/presentation/view/screen/signup_screen.dart';
+import 'package:joddly/features/discover/presentation/view/screen/discover_screen.dart';
+import 'package:joddly/features/home/presentation/view/screen/home_screen.dart';
+import 'package:joddly/features/home/presentation/view/screen/notification_screen.dart';
+import 'package:joddly/features/home/presentation/view/screen/preview_image_screen.dart';
+import 'package:joddly/features/home/presentation/view/screen/see_all_photos.dart';
 import 'package:joddly/features/main/presentation/view/screen/bottom_nav_bar_screen.dart';
 import 'package:joddly/features/main/presentation/view/screen/main_screen.dart';
 import 'package:joddly/features/onboarding/presentation/view/screen/onboarding_screen.dart';
@@ -12,7 +17,7 @@ import 'package:joddly/features/splash/splash_screen.dart';
 import 'route_name.dart';
 
 class AppRoutes {
-  static const String initialRoute = RouteName.splashScreen;
+  static const String initialRoute = RouteName.discoverScreen;
 
   static final Map<String, WidgetBuilder> routes = {
     RouteName.splashScreen: (context) => const SplashScreen(),
@@ -25,6 +30,11 @@ class AppRoutes {
     RouteName.signup: (context) => const SignupScreen(),
     RouteName.mainScreen: (context) => const MainScreen(),
     RouteName.bottomNavScreen: (context) => const BottomNavBarScreen(),
+    RouteName.homeScreen: (context) => const HomeScreen(),
+    RouteName.seeAll: (context) => const SeeAllPhotos(),
+    RouteName.previewImageScreen: (context) => const PreviewImageScreen(),
+    RouteName.notificationScreen: (context) => const NotificationScreen(),
+    RouteName.discoverScreen: (context) => const DiscoverScreen(),
 
   };
 }
