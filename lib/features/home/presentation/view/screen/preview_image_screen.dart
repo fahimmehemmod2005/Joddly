@@ -55,7 +55,10 @@ class _PreviewImageScreenState extends State<PreviewImageScreen> {
                       title: 'Premium Features!',
                       subTitle: 'Upgrade plan to unlock premium\nfeatures and content!',
                       button1label: 'Upgrade Plan',
-                      button1Pressed: (){},
+                      button1Pressed: (){
+                        Navigator.pop(context);
+                        Navigator.pushNamed(context, RouteName.membership);
+                      },
                     )
                   );
                 },

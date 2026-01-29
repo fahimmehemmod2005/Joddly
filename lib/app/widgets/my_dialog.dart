@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:joddly/app/widgets/primary_button.dart';
+import 'package:joddly/core/constant/app_color.dart';
 
 import '../../core/constant/app_size_box.dart';
 import '../../core/constant/app_text_styles.dart';
@@ -57,11 +58,11 @@ class MyDialog extends StatelessWidget {
         if (showSecondButton)
           PrimaryButton(
             showGradient: false,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.transparent,
             label: button2label,
             textColor: Colors.black,
-            borderColor: Color(0xffECEFF3),
-            onPressed: () {},
+            borderColor: AppColor.grayBlack,
+            onPressed: button2Pressed,
           ),
         AppSizeBox.height10,
       ],

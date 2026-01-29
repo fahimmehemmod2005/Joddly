@@ -14,4 +14,8 @@ class RouteName {
   static const String previewImageScreen = '/previewImageScreen';
   static const String notificationScreen = '/notificationScreen';
   static const String discoverScreen = '/discoverScreen';
+  static const String imageEffects = '/imageEffects';
+  static const String membership = '/membership';
+  static const String currentPlan = '/currentPlan';
+  static const String paymentMethod = '/paymentMethod';
 }

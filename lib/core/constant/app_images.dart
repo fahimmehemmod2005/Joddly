@@ -45,4 +45,6 @@ class AppImages {
   static const String sketches3 = 'assets/images/sketches3.png';
   static const String search = 'assets/icons/search.png';
   static const String filter = 'assets/icons/filter.png';
+  static const String upload = 'assets/icons/upload.png';
+  static const String check = 'assets/icons/check.png';
 }

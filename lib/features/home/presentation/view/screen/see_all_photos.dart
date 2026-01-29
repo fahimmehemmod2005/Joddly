@@ -114,6 +114,7 @@ class _SeeAllPhotosState extends State<SeeAllPhotos> {
                   );
                 }).toList(),
               ),
+              AppSizeBox.height10,
             ],
           ),
         ),

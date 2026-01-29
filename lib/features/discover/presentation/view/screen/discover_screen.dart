@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:joddly/core/constant/app_color.dart';
-import 'package:joddly/core/constant/app_images.dart';
 import 'package:joddly/core/constant/app_size_box.dart';
-
+import 'package:joddly/features/discover/presentation/view/screen/digital_art.dart';
+import 'package:joddly/features/discover/presentation/view/screen/oil_painting.dart';
+import 'package:joddly/features/discover/presentation/view/screen/realistic_portraits.dart';
+import 'package:joddly/features/discover/presentation/view/screen/sketches.dart';
+import 'all_photos.dart';
 import '../widgets/search_and_filter_field.dart';
 
 class DiscoverScreen extends StatefulWidget {
@@ -25,17 +28,17 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                AppSizeBox.height5,
+                AppSizeBox.height10,
                 SearchAndFilterField(),
                 AppSizeBox.height15,
                 TabBar(
                   isScrollable: true,
                   indicatorSize: TabBarIndicatorSize.tab,
+                  dividerColor: Colors.transparent,
                   indicator: BoxDecoration(
                     gradient: AppColor.primaryGradient,
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  dividerColor: Colors.transparent,
                   labelColor: Colors.white,
                   unselectedLabelColor: const Color(0xFF6B7280),
                   labelStyle: const TextStyle(
@@ -47,28 +50,23 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
                     fontWeight: FontWeight.w500,
                   ),
                   splashBorderRadius: BorderRadius.circular(14),
-                  tabs: const [
-                    _PillTab(text: 'All'),
-                    _PillTab(text: 'Realistic'),
-                    _PillTab(text: 'Sketches'),
-                    _PillTab(text: 'Oil Painting'),
+                  tabs: [
+                    pillTab('All'),
+                    pillTab('Realistic'),
+                    pillTab('Sketches'),
+                    pillTab('Oil Painting'),
+                    pillTab('Digital Art'),
                   ],
                 ),
-
+                AppSizeBox.height20,
                 Expanded(
                   child: TabBarView(
                     children: [
-                      Container(
-                        color: Colors.white,
-                        child: Icon(Icons.settings),
-                      ),
-                      Container(color: Colors.white, child: Icon(Icons.person)),
-                      Container(color: Colors.white, child: Icon(Icons.home)),
-                      Container(
-                        color: Colors.white,
-                        child: Icon(Icons.settings),
-                      ),
-                      Container(color: Colors.white, child: Icon(Icons.person)),
+                      AllPhotos(),
+                      RealisticPortraits(),
+                      Sketches(),
+                      OilPainting(),
+                      DigitalArt()
                     ],
                   ),
                 ),
@@ -81,18 +79,20 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
   }
 }
 
-class _PillTab extends StatelessWidget {
-  final String text;
-  const _PillTab({required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Tab(
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(14)),
-        child: Text(text,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+Tab pillTab(String text) {
+  return Tab(
+    child: Container(
+      padding: const EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 10
       ),
-    );
-  }
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(14)
+      ),
+      child: Text(
+        text,
+        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+      ),
+    ),
+  );
 }
