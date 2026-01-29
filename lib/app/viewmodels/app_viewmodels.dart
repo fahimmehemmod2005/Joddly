@@ -11,6 +11,7 @@ import '../../features/auth/presentation/viewmodel/login_view_model.dart';
 import '../../features/auth/presentation/viewmodel/otp_view_model.dart';
 import '../../features/auth/presentation/viewmodel/resend_button_view_model.dart';
 import '../../features/auth/presentation/viewmodel/reset_password_view_model.dart';
+import '../../features/membership/presentation/viewmodel/payment_method_view_model.dart';
 
 class AppViewModels {
   static final List<SingleChildWidget> viewModels = [
@@ -46,6 +47,9 @@ class AppViewModels {
     ),
     ChangeNotifierProvider<ImageSelectionProvider>(
       create: (_) => ImageSelectionProvider(),
+    ),
+    ChangeNotifierProvider<PaymentMethodProvider>(
+      create: (_) => PaymentMethodProvider(),
     ),
   ];
 }

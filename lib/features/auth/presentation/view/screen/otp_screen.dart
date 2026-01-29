@@ -116,7 +116,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     ResendButton(),
                     AppSizeBox.height30,
                     PrimaryButton(label: 'Verify', onPressed: onPressed),
-                 AppSizeBox.height10
+                    AppSizeBox.height10,
                   ],
                 ),
               ),

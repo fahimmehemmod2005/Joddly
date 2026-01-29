@@ -47,4 +47,7 @@ class AppImages {
   static const String filter = 'assets/icons/filter.png';
   static const String upload = 'assets/icons/upload.png';
   static const String check = 'assets/icons/check.png';
+  static const String credit = 'assets/icons/credit.png';
+  static const String visa = 'assets/icons/visa.png';
+  static const String master = 'assets/icons/master.png';
 }
