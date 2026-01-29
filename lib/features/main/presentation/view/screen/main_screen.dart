@@ -96,7 +96,6 @@ class _MainScreenState extends State<MainScreen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      height: 40.0,
                       width: 40.0,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
@@ -109,17 +108,17 @@ class _MainScreenState extends State<MainScreen> {
                         color: Colors.white,
                       ),
                     ),
-                    AppSizeBox.width20,
+                    AppSizeBox.width10,
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
                           'Premium Features',
                           style: AppTextStyles.size16w600(color: Colors.white),
                         ),
                         Text(
-                          'Download your creations in high quality',
+                          'Download your quality images',
                           style: AppTextStyles.size14w400(color: Colors.white),
                         ),
                       ],

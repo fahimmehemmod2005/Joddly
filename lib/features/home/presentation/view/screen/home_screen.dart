@@ -31,9 +31,9 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               AppSizeBox.height5,
               HomeHeader(),
-              AppSizeBox.height20,
+              AppSizeBox.height10,
               WidgetStatusBar(title: 'Type your idea'),
-              AppSizeBox.height20,
+              AppSizeBox.height10,
               Container(
                 height: 104.0.h,
                 width: double.infinity,
@@ -51,9 +51,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              AppSizeBox.height20,
+              AppSizeBox.height10,
               WidgetStatusBar(title: 'Aspect Ratio'),
-              AppSizeBox.height15,
+              AppSizeBox.height10,
 
               WidgetAspectRatio(),
               AppSizeBox.height20,

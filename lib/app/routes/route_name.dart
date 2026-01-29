@@ -18,4 +18,5 @@ class RouteName {
   static const String membership = '/membership';
   static const String currentPlan = '/currentPlan';
   static const String paymentMethod = '/paymentMethod';
+  static const String reviewSummary = '/reviewSummary';
 }

@@ -26,6 +26,7 @@ class NotificationCard extends StatelessWidget {
           Container(
             height: 48.0,
             width: 48.0,
+            padding: EdgeInsets.all(15),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(30.0),

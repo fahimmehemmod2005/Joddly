@@ -23,7 +23,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       'title': "Sports Pick",
       'content':
           "We predict Man City to win based on home advantage, xG, and injuries.",
-      'time': "2",
+      'time': "2m",
     },
     {
       'image': AppImages.share,

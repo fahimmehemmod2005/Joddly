@@ -15,13 +15,14 @@ import 'package:joddly/features/main/presentation/view/screen/main_screen.dart';
 import 'package:joddly/features/membership/presentation/view/screen/current_plan.dart';
 import 'package:joddly/features/membership/presentation/view/screen/membership.dart';
 import 'package:joddly/features/membership/presentation/view/screen/payment_method.dart';
+import 'package:joddly/features/membership/presentation/view/screen/review_summary.dart';
 import 'package:joddly/features/onboarding/presentation/view/screen/onboarding_screen.dart';
 import 'package:joddly/features/onboarding/presentation/view/screen/without_login_screen.dart';
 import 'package:joddly/features/splash/splash_screen.dart';
 import 'route_name.dart';
 
 class AppRoutes {
-  static const String initialRoute = RouteName.paymentMethod;
+  static const String initialRoute = RouteName.splashScreen;
 
   static final Map<String, WidgetBuilder> routes = {
     RouteName.splashScreen: (context) => const SplashScreen(),
@@ -43,6 +44,7 @@ class AppRoutes {
     RouteName.membership: (context) => const Membership(),
     RouteName.currentPlan: (context) => const CurrentPlan(),
     RouteName.paymentMethod: (context) => const PaymentMethod(),
+    RouteName.reviewSummary: (context) => const ReviewSummary(),
 
   };
 }

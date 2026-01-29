@@ -80,6 +80,7 @@ class _PreviewImageScreenState extends State<PreviewImageScreen> {
                         subTitle: 'Your artwork has been successfully',
                         button1label: 'Go to Home',
                         button1Pressed: (){
+                          Navigator.pop(context);
                           Navigator.pushNamed(context, RouteName.bottomNavScreen);
                         },
                       )
@@ -110,7 +111,9 @@ class _PreviewImageScreenState extends State<PreviewImageScreen> {
                     subtitle: 'Once deleted, it can not be recovered again.',
                     button1: 'Cancel',
                     button2: 'Delete',
-                    onConfirm: (){}
+                    onConfirm: (){
+                        Navigator.pop(context);
+                    }
                   );
                 },
               ),

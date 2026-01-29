@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:joddly/app/routes/route_name.dart';
 import 'package:joddly/app/widgets/primary_button.dart';
 import 'package:joddly/app/widgets/widget_header.dart';
 import 'package:joddly/core/constant/app_images.dart';
@@ -15,11 +16,6 @@ class PaymentMethod extends StatefulWidget {
 }
 
 class _PaymentMethodState extends State<PaymentMethod> {
-  final methods = [
-    {"id": 1, "title": "Credit / Debit", "icon": AppImages.credit},
-    {"id": 2, "title": "PayPal", "icon": AppImages.visa},
-    {"id": 3, "title": "Apple Pay", "icon": AppImages.master},
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,13 +30,9 @@ class _PaymentMethodState extends State<PaymentMethod> {
               Consumer<PaymentMethodProvider>(
                 builder: (context, provider, child) {
                   final methods = [
-                    {
-                      "id": 1,
-                      "title": "Credit / Debit",
-                      "icon": AppImages.credit,
-                    },
-                    {"id": 2, "title": "PayPal", "icon": AppImages.visa},
-                    {"id": 3, "title": "Apple Pay", "icon": AppImages.master},
+                    {"id": 1, "title": "Credit / Debit", "icon": AppImages.credit,},
+                    {"id": 2, "title": "Visa", "icon": AppImages.visa},
+                    {"id": 3, "title": "Master", "icon": AppImages.master},
                   ];
 
                   return Column(
@@ -88,7 +80,9 @@ class _PaymentMethodState extends State<PaymentMethod> {
               400.verticalSpace,
               PrimaryButton(
                 label: 'Continue',
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.pushNamed(context, RouteName.reviewSummary);
+                },
               ),
             ],
           ),

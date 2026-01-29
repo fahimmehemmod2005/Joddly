@@ -45,7 +45,9 @@ class HomeHeader extends StatelessWidget {
               ],
             ),
           ),
-          onTap: (){},
+          onTap: (){
+            Navigator.pushNamed(context, RouteName.membership);
+          },
         ),
       ],
     );
