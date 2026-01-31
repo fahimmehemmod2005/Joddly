@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:joddly/core/constant/app_color.dart';
 import 'package:joddly/core/constant/app_images.dart';
 import 'package:joddly/features/ai/presentation/view/screen/ai_friend_chat.dart';
@@ -36,7 +35,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 14),
               child: Container(
-                height: 85.h,
+                height: 80,
                 padding: const EdgeInsets.symmetric(horizontal: 18),
                 decoration: BoxDecoration(
                   border: Border.all(color: AppColor.borderColor),
