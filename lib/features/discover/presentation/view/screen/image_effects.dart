@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:joddly/app/routes/app_routes.dart';
 import 'package:joddly/app/routes/route_name.dart';
 import 'package:joddly/app/widgets/primary_button.dart';
 import 'package:joddly/app/widgets/widget_status_bar.dart';

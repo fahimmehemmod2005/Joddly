@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:joddly/app/widgets/widget_header.dart';
 import 'package:joddly/app/widgets/widget_status_bar.dart';
-import 'package:joddly/core/constant/app_color.dart';
 import 'package:joddly/core/constant/app_images.dart';
 import 'package:joddly/core/constant/app_size_box.dart';
-import 'package:joddly/core/constant/app_text_styles.dart';
-
 import '../widgets/notification_card.dart';
 
 class NotificationScreen extends StatefulWidget {

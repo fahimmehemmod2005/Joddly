@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:joddly/app/widgets/widget_status_bar.dart';
 import 'package:joddly/core/constant/app_images.dart';
 import 'package:joddly/core/constant/app_size_box.dart';
 import 'package:joddly/features/home/presentation/view/widgets/home_header.dart';
-
-import '../../../../../core/constant/app_color.dart';
 
 class SeeAllPhotos extends StatefulWidget {
   const SeeAllPhotos({super.key});
