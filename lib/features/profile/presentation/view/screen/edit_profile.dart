@@ -29,7 +29,7 @@ class _EditProfileState extends State<EditProfile> {
               WidgetHeader(title: 'Profile', width: 103.w),
               AppSizeBox.height20,
               Container(
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: AppColor.normal,
@@ -38,11 +38,12 @@ class _EditProfileState extends State<EditProfile> {
                 child: Row(
                   children: [
                     Stack(
+                      clipBehavior: Clip.none,
                       children: [
                         Container(
                           height: 80,
                           width: 80,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
                               image: AssetImage(AppImages.fahim),
@@ -50,35 +51,49 @@ class _EditProfileState extends State<EditProfile> {
                             ),
                           ),
                         ),
+
+                        // Camera Button
                         Positioned(
-                          right: 1,
-                          bottom: -11,
-                          child: IconButton(
-                              icon: Icon(Icons.camera_alt_outlined),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white
+                          right: -2,
+                          bottom: -6,
+                          child: GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              padding: const EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.camera_alt_outlined,
+                                size: 18,
+                                color: Colors.black,
+                              ),
                             ),
-                            onPressed: (){},
                           ),
-                        )
+                        ),
                       ],
                     ),
                     AppSizeBox.width15,
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Profile Picture',
-                          style: AppTextStyles.size18w700(color: Colors.black),
-                        ),
-                        Text(
-                          'Click the camera icon to upload\nor change photo',
-                          style: AppTextStyles.size14w400(
-                            color: AppColor.grayBlack,
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Profile Picture',
+                            style: AppTextStyles.size18w700(
+                              color: Colors.black,
+                            ),
                           ),
-                        ),
-                      ],
+                          Text(
+                            'Click the camera icon to upload or change photo',
+                            style: AppTextStyles.size14w400(
+                              color: AppColor.grayBlack,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -100,21 +115,23 @@ class _EditProfileState extends State<EditProfile> {
               Row(
                 children: [
                   Expanded(
-                      child: PrimaryButton(
-                        label: 'Save',
-                        onPressed: (){Navigator.pop(context);},
-                      ),
+                    child: PrimaryButton(
+                      label: 'Save',
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
                   ),
                   AppSizeBox.width15,
                   Expanded(
-                      child: PrimaryButton(
-                        showGradient: false,
-                        borderColor: AppColor.normal,
-                        label: 'Cancel',
-                        backgroundColor: Colors.white,
-                        textColor: Colors.black,
-                        onPressed: (){Navigator.pop(context);},
-                      )
+                    child: PrimaryButton(
+                      showGradient: false,
+                      label: 'Cancel',
+                      textColor: Colors.black,
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
                   ),
                 ],
               ),

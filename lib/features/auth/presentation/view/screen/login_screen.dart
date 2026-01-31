@@ -154,7 +154,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       PrimaryButton(
                         showGradient: false,
                         label: 'Continue with Google',
-                        backgroundColor: Colors.white,
                         borderColor: AppColor.borderColor,
                         textColor: Colors.black,
                         showIcon: true,
@@ -165,7 +164,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       PrimaryButton(
                         showGradient: false,
                         label: 'Continue with Google',
-                        backgroundColor: Colors.white,
                         borderColor: AppColor.borderColor,
                         textColor: Colors.black,
                         showIcon: true,

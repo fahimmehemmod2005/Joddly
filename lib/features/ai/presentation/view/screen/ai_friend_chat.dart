@@ -110,15 +110,9 @@ class _AiFriendChatState extends State<AiFriendChat> {
                             width: 40,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              gradient: AppColor.primaryGradient,
-                            ),
-                            child: Center(
-                              child: Image.asset(
-                                AppImages.profile,
-                                height: 18,
-                                width: 18,
-                                color: Colors.white,
-                                fit: BoxFit.contain,
+                              image: DecorationImage(
+                                image: AssetImage(AppImages.fahim),
+                                fit: BoxFit.cover,
                               ),
                             ),
                           ),
@@ -141,8 +135,8 @@ class _AiFriendChatState extends State<AiFriendChat> {
             padding: EdgeInsets.only(left: 15.0),
             width: double.infinity,
             decoration: BoxDecoration(
-                color: AppColor.normal,
-                borderRadius: BorderRadius.circular(10.0)
+              color: AppColor.normal,
+              borderRadius: BorderRadius.circular(10.0),
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -152,22 +146,18 @@ class _AiFriendChatState extends State<AiFriendChat> {
                     maxLines: 10,
                     minLines: 1,
                     decoration: InputDecoration(
-                        hintText: 'Type your Message...',
-                        border: InputBorder.none
+                      hintText: 'Type your Message...',
+                      border: InputBorder.none,
                     ),
                   ),
                 ),
                 IconButton(
-                  icon: Image.asset(AppImages.attach,
-                    height: 24,
-                    width: 24,),
-                  onPressed: (){},
+                  icon: Image.asset(AppImages.attach, height: 24, width: 24),
+                  onPressed: () {},
                 ),
                 IconButton(
-                  icon: Image.asset(AppImages.sent,
-                    height: 24,
-                    width: 24,),
-                  onPressed: (){},
+                  icon: Image.asset(AppImages.sent, height: 24, width: 24),
+                  onPressed: () {},
                 ),
               ],
             ),

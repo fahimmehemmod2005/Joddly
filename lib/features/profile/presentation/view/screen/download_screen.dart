@@ -95,6 +95,7 @@ class _DownloadScreenState extends State<DownloadScreen> {
                     },
                 )
               ),
+              AppSizeBox.height15,
             ],
           ),
         ),

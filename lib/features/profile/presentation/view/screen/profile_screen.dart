@@ -48,11 +48,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('MD Fahim Mehemmod',style: AppTextStyles.size18w700(color: Colors.black),),
-                        Text('fahim@email.com',style: AppTextStyles.size14w400(color: AppColor.grayBlack),)
+                        Text('fahim@gmail.com',style: AppTextStyles.size14w400(color: AppColor.grayBlack),)
                       ],
                     ),
-                    const Spacer(),
-                    Icon(Icons.arrow_forward_ios_outlined)
                   ],
                 ),
                 onTap: (){

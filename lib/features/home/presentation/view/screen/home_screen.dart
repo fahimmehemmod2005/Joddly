@@ -101,6 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.pushNamed(context, RouteName.previewImageScreen);
                 },
               ),
+              AppSizeBox.height10,
             ],
           ),
         ),
