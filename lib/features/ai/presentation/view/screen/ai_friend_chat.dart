@@ -137,6 +137,7 @@ class _AiFriendChatState extends State<AiFriendChat> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Container(
+            margin: EdgeInsets.symmetric(vertical: 10),
             padding: EdgeInsets.only(left: 15.0),
             width: double.infinity,
             decoration: BoxDecoration(
