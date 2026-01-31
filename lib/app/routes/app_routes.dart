@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:joddly/features/ai/presentation/view/screen/ai_friend_chat.dart';
 import 'package:joddly/features/auth/presentation/view/screen/forgot_screen.dart';
 import 'package:joddly/features/auth/presentation/view/screen/login_screen.dart';
 import 'package:joddly/features/auth/presentation/view/screen/otp_screen.dart';
@@ -18,6 +19,11 @@ import 'package:joddly/features/membership/presentation/view/screen/payment_meth
 import 'package:joddly/features/membership/presentation/view/screen/review_summary.dart';
 import 'package:joddly/features/onboarding/presentation/view/screen/onboarding_screen.dart';
 import 'package:joddly/features/onboarding/presentation/view/screen/without_login_screen.dart';
+import 'package:joddly/features/profile/presentation/view/screen/account_settings.dart';
+import 'package:joddly/features/profile/presentation/view/screen/change_password.dart';
+import 'package:joddly/features/profile/presentation/view/screen/download_screen.dart';
+import 'package:joddly/features/profile/presentation/view/screen/edit_profile.dart';
+import 'package:joddly/features/profile/presentation/view/screen/profile_screen.dart';
 import 'package:joddly/features/splash/splash_screen.dart';
 import 'route_name.dart';
 
@@ -45,6 +51,12 @@ class AppRoutes {
     RouteName.currentPlan: (context) => const CurrentPlan(),
     RouteName.paymentMethod: (context) => const PaymentMethod(),
     RouteName.reviewSummary: (context) => const ReviewSummary(),
+    RouteName.aiFriend: (context) => const AiFriendChat(),
+    RouteName.profileScreen: (context) => const ProfileScreen(),
+    RouteName.editProfile: (context) => const EditProfile(),
+    RouteName.accountSettings: (context) => const AccountSettings(),
+    RouteName.changePassword: (context) => const ChangePassword(),
+    RouteName.downloadScreen: (context) => const DownloadScreen(),
 
   };
 }

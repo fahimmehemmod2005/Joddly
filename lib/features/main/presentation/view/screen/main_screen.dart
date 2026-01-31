@@ -45,7 +45,9 @@ class _MainScreenState extends State<MainScreen> {
                         ),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, RouteName.profileScreen);
+                    },
                   ),
                 ],
               ),
@@ -76,7 +78,9 @@ class _MainScreenState extends State<MainScreen> {
                 title: 'AI Friend',
                 subtitle: 'Chat with your Al companion',
                 sideImage: AppImages.layer3,
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, RouteName.aiFriend);
+                },
               ),
               Container(
                 height: 100.0,

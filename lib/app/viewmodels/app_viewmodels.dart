@@ -4,6 +4,7 @@ import 'package:joddly/features/home/presentation/viewmodel/drop_down_provoder.d
 import 'package:joddly/features/home/presentation/viewmodel/image_selection_provider.dart';
 import 'package:joddly/features/main/presentation/viewmodel/bottom_nav_view_model.dart';
 import 'package:joddly/features/onboarding/presentation/viewmodel/onboarding_view_model.dart';
+import 'package:joddly/features/profile/presentation/viewmodel/change_password_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 import '../../features/auth/presentation/viewmodel/forgot_view_model.dart';
@@ -50,6 +51,9 @@ class AppViewModels {
     ),
     ChangeNotifierProvider<PaymentMethodProvider>(
       create: (_) => PaymentMethodProvider(),
+    ),
+    ChangeNotifierProvider<ChangePasswordViewModel>(
+      create: (_) => ChangePasswordViewModel(),
     ),
   ];
 }

@@ -5,7 +5,6 @@ import 'package:joddly/app/widgets/title_subtitle_bar.dart';
 import 'package:joddly/app/widgets/widget_header.dart';
 import 'package:joddly/core/constant/app_images.dart';
 import 'package:joddly/core/constant/app_size_box.dart';
-import 'package:joddly/core/constant/app_text_styles.dart';
 import 'package:joddly/features/auth/presentation/viewmodel/reset_password_view_model.dart';
 import 'package:provider/provider.dart';
 import '../../../../../app/routes/route_name.dart';
@@ -43,6 +42,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
           subTitle: 'You will be directed to the homepage.',
           button1label: 'Get Started',
           button1Pressed: () {
+            Navigator.pop(context);
             Navigator.pushReplacementNamed(context, RouteName.login);
           },
         ),

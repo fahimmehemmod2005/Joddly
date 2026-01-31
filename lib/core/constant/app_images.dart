@@ -50,4 +50,12 @@ class AppImages {
   static const String credit = 'assets/icons/credit.png';
   static const String visa = 'assets/icons/visa.png';
   static const String master = 'assets/icons/master.png';
+  static const String sent = 'assets/icons/sent.png';
+  static const String attach = 'assets/icons/attach.png';
+  static const String crown = 'assets/icons/crown.png';
+  static const String download = 'assets/icons/download.png';
+  static const String logout = 'assets/icons/logout.png';
+  static const String settings = 'assets/icons/settings.png';
+  static const String block = 'assets/icons/block.png';
+  static const String key = 'assets/icons/key.png';
 }

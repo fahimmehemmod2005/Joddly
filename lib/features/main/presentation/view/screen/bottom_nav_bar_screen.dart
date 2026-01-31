@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:joddly/core/constant/app_color.dart';
 import 'package:joddly/core/constant/app_images.dart';
+import 'package:joddly/features/ai/presentation/view/screen/ai_friend_chat.dart';
 import 'package:joddly/features/discover/presentation/view/screen/discover_screen.dart';
 import 'package:joddly/features/home/presentation/view/screen/home_screen.dart';
+import 'package:joddly/features/profile/presentation/view/screen/profile_screen.dart';
 import 'package:provider/provider.dart';
 import '../../viewmodel/bottom_nav_view_model.dart';
 
@@ -19,8 +21,8 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
     HomeScreen(),
     DiscoverScreen(),
     HomeScreen(),
-    Center(child: Text("Chat")),
-    Center(child: Text("Profile")),
+    AiFriendChat(),
+    ProfileScreen(),
   ];
 
   @override

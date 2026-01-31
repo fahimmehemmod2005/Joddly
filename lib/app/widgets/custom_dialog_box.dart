@@ -9,6 +9,7 @@ void showCustomDialog({
   String? image,
   String? button2,
   String? button1,
+  bool? showImage
 }) {
   showDialog(
     context: context,
@@ -28,6 +29,7 @@ void showCustomDialog({
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
+                if(showImage ?? true)
                 Container(
                   height: 150.0,
                   width: 150,

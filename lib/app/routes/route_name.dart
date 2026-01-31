@@ -19,4 +19,10 @@ class RouteName {
   static const String currentPlan = '/currentPlan';
   static const String paymentMethod = '/paymentMethod';
   static const String reviewSummary = '/reviewSummary';
+  static const String aiFriend = '/aiFriend';
+  static const String profileScreen = '/profileScreen';
+  static const String editProfile = '/editProfile';
+  static const String accountSettings = '/accountSettings';
+  static const String changePassword = '/changePassword';
+  static const String downloadScreen = '/downloadScreen';
 }
