@@ -29,28 +29,26 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
     return Consumer<BottomNavViewModel>(
       builder: (context, provider, child) {
         return Scaffold(
+          extendBody: true,
           body: screens[provider.currentIndex],
           bottomNavigationBar: SafeArea(
-            bottom: true,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(20, 0, 20, 14),
-              child: Container(
-                height: 80,
-                padding: const EdgeInsets.symmetric(horizontal: 18),
-                decoration: BoxDecoration(
-                  border: Border.all(color: AppColor.borderColor),
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    _navItem(provider, AppImages.home, "Home", 0),
-                    _navItem(provider, AppImages.discover, "Discover", 1),
-                    _centerButton(provider, () => provider.changeIndex(2)),
-                    _navItem(provider, AppImages.message, "Chat", 3),
-                    _navItem(provider, AppImages.profile, "Profile", 4),
-                  ],
-                ),
+            child: Container(
+              height: 80,
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              margin: const EdgeInsets.only(left: 15, right: 15, bottom: 5),
+              decoration: BoxDecoration(
+                border: Border.all(color: AppColor.borderColor),
+                borderRadius: BorderRadius.circular(100),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _navItem(provider, AppImages.home, "Home", 0),
+                  _navItem(provider, AppImages.discover, "Discover", 1),
+                  _centerButton(provider, () => provider.changeIndex(2)),
+                  _navItem(provider, AppImages.message, "Chat", 3),
+                  _navItem(provider, AppImages.profile, "Profile", 4),
+                ],
               ),
             ),
           ),
